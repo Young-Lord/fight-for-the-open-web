@@ -9,7 +9,7 @@
 ## Чому?
 
 > Із [Google vs. the Open Web
-](https://interpeer.io/blog/2023/07/google-vs-the-open-web/), піл ліцензією [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
+](https://interpeer.io/blog/2023/07/google-vs-the-open-web/), під ліцензією [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0).
 
 ### Google намагається вбити Відкритий Інтернет
 
