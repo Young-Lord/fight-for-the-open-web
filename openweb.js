@@ -5,10 +5,8 @@
     navigator.browserLanguage ||
     navigator.systemLanguage;
   // convert to lower if not undefined
-  if (lang.toLowerCase) {
+  if (lang?.toLowerCase) {
     lang = lang.toLowerCase();
-  } else {
-    lang = 'en-us';
   }
   const home_url =
     'https://github.com/Young-Lord/fight-for-the-open-web/tree/main/README.md';
