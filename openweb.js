@@ -5,7 +5,7 @@
     navigator.browserLanguage ||
     navigator.systemLanguage;
   // convert to lower if not undefined
-  if (lang !== 'undefined') {
+  if (lang !== undefined) {
     lang = lang.toLowerCase();
   } else {
     lang = 'en-us';
