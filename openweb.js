@@ -24,7 +24,7 @@
   // detect Web Environment Integrity API
   if (navigator.getEnvironmentIntegrity !== undefined) {
     // fuck it
-    alert(translations[lang]['alert']);
+    alert((translations[lang]??translations['en-us'])['alert']);
     window.location.href = home_url;
   }
 })();
