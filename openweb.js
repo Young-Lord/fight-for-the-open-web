@@ -18,7 +18,7 @@
     },
     'en-us': {
       alert:
-        'Detected Web Environment Integrity API, a . Use Firefox to access this website and help keep the Internet open.',
+        'Detected Web Environment Integrity API, a protocol destroying the whole Internet. Use Firefox to access this website and help keep the Internet open.',
     },
   };
   // detect Web Environment Integrity API
