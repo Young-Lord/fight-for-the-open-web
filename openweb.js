@@ -22,6 +22,10 @@
       alert:
         'Виявлено використання Web Environment Integrity API - протоколу, що руйнує весь Інтернет. Використовуйте Firefox, щоб отримати доступ до цього веб-сайту та допомогти зберегти Інтернет відкритим.',
     },
+    'fr-fr': {
+      alert:
+        'Détection de l\'API Web Environment Integrity, un protocole détruisant l\'ensemble d\'Internet. Utilisez Firefox pour accéder à ce site web et aidez à maintenir l\'Internet ouvert.',
+    },
   };
   // detect Web Environment Integrity API
   if (navigator.getEnvironmentIntegrity !== undefined) {

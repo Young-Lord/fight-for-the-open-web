@@ -4,7 +4,7 @@
 <script src="https://cdn.jsdelivr.net/gh/Young-Lord/fight-for-the-open-web@main/openweb.js" defer async></script>
 ```
 
-[English](./README.md) | [简体中文](./README.zh-CN.md) | Українська
+[English](./README.md) | [简体中文](./README.zh-CN.md) | Українська | [Français](./README.fr-FR.md)
 
 ## Чому?
 
