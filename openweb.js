@@ -4,37 +4,85 @@
     navigator.userLanguage ||
     navigator.browserLanguage ||
     navigator.systemLanguage;
+
   // convert to lower if not undefined
   if (lang?.toLowerCase) {
     lang = lang.toLowerCase();
   }
+
   const home_url =
-    'https://github.com/Young-Lord/fight-for-the-open-web/tree/main/README.md';
+    "https://github.com/Young-Lord/fight-for-the-open-web/tree/main/README.md";
+
   const translations = {
-    'zh-cn': {
-      alert: '检测到 WEI，被 Google 操控的对抗开放互联网的协议。请使用 Firefox 浏览器访问本网站。',
+    "zh-cn": {
+      message:
+        "检测到 WEI，被 Google 操控的对抗开放互联网的协议。请使用 Firefox 浏览器访问本网站。",
     },
-    'en-us': {
-      alert:
-        'Detected Web Environment Integrity API, a protocol destroying the whole Internet. Use Firefox to access this website and help keep the Internet open.',
+    "en-us": {
+      message: `We're sorry, but the browser you are currently using seems to support the <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>. This user-hostile addition to Google-backed browsers <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">works to undermine the free and open internet</a>, and is consequently not supported. Please switch to the latest version of <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> or any other browser that still gives some value to the notion of user control and freedom to use our service. Thank you for your understanding. For more information, visit <a href="${home_url}">${home_url.replace(
+        "https://",
+        ""
+      )}</a>`,
     },
-    'uk-ua': {
-      alert:
-        'Виявлено використання Web Environment Integrity API - протоколу, що руйнує весь Інтернет. Використовуйте Firefox, щоб отримати доступ до цього веб-сайту та допомогти зберегти Інтернет відкритим.',
+    "uk-ua": {
+      message:
+        "Виявлено використання Web Environment Integrity API - протоколу, що руйнує весь Інтернет. Використовуйте Firefox, щоб отримати доступ до цього веб-сайту та допомогти зберегти Інтернет відкритим.",
     },
-    'fr-fr': {
-      alert:
-        'Détection de l\'API Web Environment Integrity, un protocole détruisant l\'ensemble d\'Internet. Utilisez Firefox pour accéder à ce site web et aidez à maintenir l\'Internet ouvert.',
+    "fr-fr": {
+      message:
+        "Détection de l'API Web Environment Integrity, un protocole détruisant l'ensemble d'Internet. Utilisez Firefox pour accéder à ce site web et aidez à maintenir l'Internet ouvert.",
     },
-	'tr': {
-      alert:
-        'Web Environment Integrity API\'sı tespit edildi, bu API İnternet\'in tamamını yok eder. Bu siteye erişmek için Firefox kullanın ve İnternet\'in açık kalmasına yardımcı olun.'
+    tr: {
+      message:
+        "Web Environment Integrity API'sı tespit edildi, bu API İnternet'in tamamını yok eder. Bu siteye erişmek için Firefox kullanın ve İnternet'in açık kalmasına yardımcı olun.",
     },
   };
+
   // detect Web Environment Integrity API
   if (navigator.getEnvironmentIntegrity !== undefined) {
     // fuck it
-    alert((translations[lang]??translations['en-us'])['alert']);
-    window.location.href = home_url;
+    const text = (translations[lang] ?? translations["en-us"])["message"];
+
+    // Just in case the website has overwritten some of these styles, we're going to set everything as !important and overwrite things like `display` and `position` that could end up screwing up the text.
+    // We're also setting the z-index value in case something gets added to the body after this script rus.
+
+    document.body.innerHTML = `
+        <style>
+            a {
+                text-decoration: none !important;
+                color: #013C88 !important;
+            }
+
+            a:hover {
+                color: #142E51 !important;
+            }
+        </style>
+
+        <div style="
+            background: #f54b39 !important;
+            color: white !important;
+            font-weight: bold !important;
+            width: 100% !important;
+            height: 100% !important;
+            text-align: center !important;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            font-size: 3em !important;
+            font-family: sans-serif !important;
+            display: unset !important;
+            z-index: 696969696969696969 !important;
+        ">
+            <p style="
+                margin: 0 !important; 
+                padding: 0 !important; 
+                margin-top: 2.5% !important; 
+                display: unset !important; 
+                position: unset !important;
+            ">
+                ${text}
+            </p>
+        </div>
+    `;
   }
 })();
