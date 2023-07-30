@@ -46,8 +46,11 @@ Bu projeyi arkadaşlarınız ve ailenizle paylaşın ve onları da aynı şeyi y
 Bu projeye GitHub üzerinde bir yıldız verin ve bu bilgileri yayın.
 
 ## Daha Fazla Bilgi
+           
+[FSF: "Web Environment Integrity" is an all-out attack on the free Internet](https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet)
 
 [Google’s nightmare “Web Integrity API” wants a DRM gatekeeper for the web](https://arstechnica.com/gadgets/2023/07/googles-web-integrity-api-sounds-like-drm-for-the-web/)
 
 [Request for Position: Web Environment Integrity API #852](https://github.com/mozilla/standards-positions/issues/852)
 
+[\[wei\] Ensure Origin Trial enables full feature](https://github.com/chromium/chromium/commit/6f47a22906b2899412e79a2727355efa9cc8f5bd)
