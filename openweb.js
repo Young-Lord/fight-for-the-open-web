@@ -44,7 +44,7 @@
     const text = (translations[lang] ?? translations["en-us"])["message"];
 
     // Just in case the website has overwritten some of these styles, we're going to set everything as !important and overwrite things like `display` and `position` that could end up screwing up the text.
-    // We're also setting the z-index value in case something gets added to the body after this script rus.
+    // We're also setting the z-index value in case something gets added to the body after this script runs.
 
     document.body.innerHTML = `
         <style>
