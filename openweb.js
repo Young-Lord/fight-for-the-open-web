@@ -9,6 +9,9 @@
   if (lang?.toLowerCase) {
     lang = lang.toLowerCase();
   }
+  else {
+    lang = "";
+  }
 
   const home_url =
     "https://github.com/Young-Lord/fight-for-the-open-web/tree/main/README.md";
@@ -40,17 +43,14 @@
         "Web Environment Integrity API'sı tespit edildi, bu API İnternet'in tamamını yok eder. Bu siteye erişmek için Firefox kullanın ve İnternet'in açık kalmasına yardımcı olun.",
     },
     "de": {
-      message: `Entschuldigung, aber der Browser, den Sie momentan verwenden, unterstützt die <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">"Web Environment Integrity API"</a>. Dieser Endnutzerfeindliche Code in Google-unterstützten Webbrowsern <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">bedroht das freie und offene Internet</a> und wird daher nicht unterstützt. Bitte verwenden Sie die neueste Version von <a href="https://www.mozilla.org/de/firefox/browsers/">Firefox</a> oder einem anderen Browser, der noch Wert auf die Rechte und Freiheiten des Endnutzers legt, um diese Website zu verwenden. Vielen Dank für Ihr Verständnis. Weitere Informationen finden Sie unter <a href="${home_url}">${home_url.replace(
-        "https://",
-        ""
-      )}</a>`,
+      message: `Entschuldigung, aber der Browser, den Sie momentan verwenden, unterstützt die <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">"Web Environment Integrity API"</a>. Dieser Endnutzerfeindliche Code in Google-unterstützten Webbrowsern <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">bedroht das freie und offene Internet</a> und wird daher nicht unterstützt. Bitte verwenden Sie die neueste Version von <a href="https://www.mozilla.org/de/firefox/browsers/">Firefox</a> oder einem anderen Browser, der noch Wert auf die Rechte und Freiheiten des Endnutzers legt, um diese Website zu verwenden. Vielen Dank für Ihr Verständnis.`,
     },
   };
 
   // detect Web Environment Integrity API
   if (navigator.getEnvironmentIntegrity !== undefined) {
     // fuck it
-    const text = (translations[lang] ?? translations["en-us"])["message"];
+    const text = (translations[lang] ?? translations[lang.split("-")[0]] ?? translations["en-us"])["message"];
 
     // Just in case the website has overwritten some of these styles, we're going to set everything as !important and overwrite things like `display` and `position` that could end up screwing up the text.
     // We're also setting the z-index value in case something gets added to the body after this script runs.
