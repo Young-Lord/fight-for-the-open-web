@@ -38,7 +38,7 @@
       message:
         "Détection de l'API Web Environment Integrity, un protocole détruisant l'ensemble d'Internet. Utilisez Firefox pour accéder à ce site web et aidez à maintenir l'Internet ouvert.",
     },
-    tr: {
+    "tr": {
       message:
         "Web Environment Integrity API'sı tespit edildi, bu API İnternet'in tamamını yok eder. Bu siteye erişmek için Firefox kullanın ve İnternet'in açık kalmasına yardımcı olun.",
     },
