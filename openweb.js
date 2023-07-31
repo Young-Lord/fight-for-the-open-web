@@ -16,7 +16,10 @@
   const translations = {
     "zh-cn": {
       message:
-        "检测到 WEI，被 Google 操控的对抗开放互联网的协议。请使用 Firefox 浏览器访问本网站。",
+        `您的浏览器很不幸地使用了 <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>，一个与用户作对，将用户封锁在 Google 生态体系内，<a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">削弱互联网</a>的开放性的 API。我们不会支持这种行径。请使用 <a href="https://www.mozilla.org/zh-cn/firefox/new/">Firefox</a> 或者其他为用户隐私着想的浏览器以继续使用我们的服务。感谢您的理解。更多信息请参阅 <a href="${home_url}">${home_url.replace(
+        "https://",
+        ""
+      )}</a>`,
     },
     "en-us": {
       message: `We're sorry, but the browser you are currently using seems to support the <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>. This user-hostile addition to Google-backed browsers <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">works to undermine the free and open internet</a>, and is consequently not supported. Please switch to the latest version of <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> or any other browser that still gives some value to the notion of user control and freedom to use our service. Thank you for your understanding. For more information, visit <a href="${home_url}">${home_url.replace(
