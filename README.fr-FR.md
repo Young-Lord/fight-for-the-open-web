@@ -14,7 +14,8 @@
 
 En utilisant la proposition "Web Environment Integrity" (Intégrité de l'environnement Web), les sites Web peuvent sélectionner sur quels appareils (navigateurs) ils souhaitent être affichés et refuser le service à d'autres appareils. Cela lie le logiciel côté client à un site Web, créant ainsi une application isolée.
 
-Web Environment Integrity sur GitHub
+[Web Environment Integrity sur GitHub](https://github.com/RupertBenWiser/Web-Environment-Integrity/blob/main/explainer.md)
+
 Cela pénalise les plates-formes sur lesquelles le logiciel côté client préféré n'est pas disponible.
 
 C'est un problème pour l'accessibilité et l'inclusion, en particulier lorsque le logiciel n'est pas disponible en raison des besoins de groupes marginalisés, comme lorsque la pauvreté rend impossible la possession d'appareils suffisamment modernes, etc.

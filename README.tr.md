@@ -14,7 +14,8 @@
 
 Teklif edilen “Web Environment Integrity” (yani Web Ortam Doğruluğu) İnternet sitelerinin hangi cihazlarda (tarayıcılarda) görüntülenmek istediklerini seçebilecekleri ve diğer cihazlara hizmet vermeyi reddedebilecekleri anlamına gelir. İstemci tarafı yazılımı bir İnternet sitesine bağlar, böylece silo haline gelmiş bir uygulama oluşturur.
 
-GitHub üzerinde Web Environment Integrity
+[GitHub üzerinde Web Environment Integrity](https://github.com/RupertBenWiser/Web-Environment-Integrity/blob/main/explainer.md)
+
 Bu, tercih edilen istemci tarafı yazılımın mevcut olmadığı platformları cezalandırmak anlamına gelir.
 
 Bu, erişilebilirlik ve kapsama için bir sorundur, özellikle yazılımın mevcut olmamasının dışlanmış grupların ihtiyaçlarıyla bağlantılı olduğunda, örneğin yoksulluk yeteri kadar modern cihazlara sahip olmayı imkânsız kıldığında, vs.

@@ -15,7 +15,8 @@ English | [简体中文](./README.zh-CN.md) | [Українська](./README.uk
 
 Using the proposed “Web Environment Integrity” means websites can select on which devices (browsers) they wish to be displayed, and can refuse service to other devices. It binds client side software to a website, creating a silo’d app.
 
-Web Environment Integrity on GitHub
+[Web Environment Integrity on GitHub](https://github.com/RupertBenWiser/Web-Environment-Integrity/blob/main/explainer.md)
+
 This penalizes platforms on which the preferred client side software is not available.
 
 This is an issue for accessibility and inclusion, in particular when the reason the software is not available is tied to the needs of marginalized groups, such as when poverty makes it impossible to own sufficiently modern devices, etc.
