@@ -40,7 +40,10 @@
     },
     tr: {
       message:
-        "Web Environment Integrity API'sı tespit edildi, bu API İnternet'in tamamını yok eder. Bu siteye erişmek için Firefox kullanın ve İnternet'in açık kalmasına yardımcı olun.",
+        "Özür dileriz ama şu an kullandığınız tarayıcı <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>'sını destekliyor gibi görünüyor. Google destekli tarayıcılara bu kullanıcı düşmanı ilave <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">açık ve özgür İnternet'i baltalamak için çalışmaktadır</a> ve sonuç olarak desteklenmemektedir. Lütfen <a href="https://www.mozilla.org/tr/firefox/new/">Firefox</a>'ın veya kullanıcı kontrolü ve özgürlüğüne hâlâ değer veren herhangi başka bir tarayıcının en yeni sürümüne geçiş yapın. Anlayışınız için teşekkür ederiz. Daha fazla bilgi için şu siteyi ziyaret edin: <a href="${home_url}">${home_url.replace(
+    "https://",
+        ""
+      )}</a>`,
     },
     "de": {
       message: `Entschuldigung, aber der Browser, den Sie momentan verwenden, unterstützt die <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">"Web Environment Integrity API"</a>. Dieser Endnutzerfeindliche Code in Google-unterstützten Webbrowsern <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">bedroht das freie und offene Internet</a> und wird daher nicht unterstützt. Bitte verwenden Sie die neueste Version von <a href="https://www.mozilla.org/de/firefox/browsers/">Firefox</a> oder einem anderen Browser, der noch Wert auf die Rechte und Freiheiten des Endnutzers legt, um diese Website zu verwenden. Vielen Dank für Ihr Verständnis.`,
