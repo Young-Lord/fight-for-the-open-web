@@ -25,7 +25,7 @@
 
 Чесно кажучи, такий крок Google не дивує. Вони вже давно намагаються захопити Інтернет як свою власну платформу. Це лише найостанніша битва.
 
-Але це також відзначає особливо викривлений момент, оскільки пропозиція визнає, що вона існує, перш за все, щоб отримати цінність від людей. Люди майніють у найгіршому вигляді.
+Але це також відзначає особливо викривлений момент, оскільки пропозиція визнає, що вона існує, перш за все, щоб отримати цінність від людей. Видобуток людей у найгіршому вигляді.
 
 Пам’ятаєте, коли їхнім девізом було «Не бути Злом?»
 
@@ -48,7 +48,7 @@
 Позначте цей проект зіркою на GitHub і поширте інформацію.
 
 ## Більше інформації
-           
+
 [FSF: "Web Environment Integrity" is an all-out attack on the free Internet](https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet)
 
 [Google’s nightmare “Web Integrity API” wants a DRM gatekeeper for the web](https://arstechnica.com/gadgets/2023/07/googles-web-integrity-api-sounds-like-drm-for-the-web/)
