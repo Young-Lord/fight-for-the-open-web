@@ -49,6 +49,9 @@
     "de": {
       message: `Entschuldigung, aber der Browser, den Sie momentan verwenden, unterstützt die <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">"Web Environment Integrity API"</a>. Dieser Endnutzerfeindliche Code in Google-unterstützten Webbrowsern <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">bedroht das freie und offene Internet</a> und wird daher nicht unterstützt. Bitte verwenden Sie die neueste Version von <a href="https://www.mozilla.org/de/firefox/browsers/">Firefox</a> oder einem anderen Browser, der noch Wert auf die Rechte und Freiheiten des Endnutzers legt, um diese Website zu verwenden. Vielen Dank für Ihr Verständnis.`,
     },
+    "nl": {
+      message: `Het spijt ons, maar de browser die u momenteel gebruikt lijkt de <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a> te ondersteunen. Deze gebruikersonvriendelijke toevoeging aan de door Google bestuurde browsers <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">ondermijnt het vrije en open internet</a> en wordt daarom niet ondersteund. Schakel aub over op de nieuwste versie van <a href="https://www.mozilla.org/en-US/firefox/new/">Firefox</a> of een andere browser die nog enige waarde hecht aan het zelfbeschikkingsrecht van gebruikers om onze service te gebruiken. Bedankt voor uw begrip. Ga voor meer informatie naar <a href="${home_url}">${home_url.replace("https://","")}</a>`,
+    },
   };
 
   // detect Web Environment Integrity API
