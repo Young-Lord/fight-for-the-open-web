@@ -78,6 +78,7 @@
           </style>
   
           <div style="
+              overflow: auto !important;
               background: #f54b39 !important;
               color: white !important;
               font-weight: bold !important;
