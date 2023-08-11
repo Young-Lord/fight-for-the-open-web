@@ -47,7 +47,7 @@ Bu projeyi arkadaşlarınız ve ailenizle paylaşın ve onları da aynı şeyi y
 Bu projeye GitHub üzerinde bir yıldız verin ve bu bilgileri yayın.
 
 ## Daha Fazla Bilgi
-           
+
 [FSF: "Web Environment Integrity" is an all-out attack on the free Internet](https://www.fsf.org/blogs/community/web-environment-integrity-is-an-all-out-attack-on-the-free-internet)
 
 [Google’s nightmare “Web Integrity API” wants a DRM gatekeeper for the web](https://arstechnica.com/gadgets/2023/07/googles-web-integrity-api-sounds-like-drm-for-the-web/)
