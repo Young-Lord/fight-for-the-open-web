@@ -79,8 +79,8 @@
   
           <div style="
               overflow: auto !important;
-              background: #f54b39 !important;
-              color: white !important;
+              background: #ffffff !important;
+              color: black !important;
               font-weight: bold !important;
               width: 100% !important;
               height: 100% !important;
@@ -88,20 +88,26 @@
               position: fixed !important;
               top: 0 !important;
               left: 0 !important;
-              font-size: 3em !important;
+              font-size: 2em !important;
               font-family: sans-serif !important;
-              display: unset !important;
+              display: flex !important;
               z-index: 696969696969696969 !important;
+              align-items: center !important;
           ">
-              <p style="
-                  margin: 0 !important; 
-                  padding: 0 !important; 
-                  margin-top: 2.5% !important; 
-                  display: unset !important; 
-                  position: unset !important;
+              <div style="
+                  padding-left: 5% !important;
+                  padding-right: 5% !important;
               ">
-                  ${text}
-              </p>
+                  <p style="
+                      margin: 0 !important; 
+                      padding: 0 !important; 
+                      margin-top: 2.5% !important; 
+                      display: unset !important; 
+                      position: unset !important;
+                  ">
+                      ${text}
+                  </p>
+              </div>
           </div>
       `;
   }
