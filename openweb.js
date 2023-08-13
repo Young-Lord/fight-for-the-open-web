@@ -35,9 +35,10 @@
       )}</a>`,
     },
     "fr-fr": {
-      message:
-        "Détection de l'API Web Environment Integrity, un protocole détruisant l'ensemble d'Internet. Utilisez Firefox pour accéder à ce site web et aidez à maintenir l'Internet ouvert.",
-    },
+      message: `Veuillez nous excuser, mais le navigateur que vous utilisez actuellement semble prendre en charge l'<a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">API Web Environment Integrity</a>. Cette addition hostile aux utilisateurs aux navigateurs soutenus par Google <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">travaille à saper Internet libre et ouvert</a>, et n'est pas conséquent pas pris en charge. Veuillez basculer sur la version la plus récente de <a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a> ou sur tout autre navigateur qui attache encore de la valeur aux notions de contrôle de l'utilisateur et de liberté pour utiliser notre service. Nous vous remercions de votre compréhension. Pour plus d'informations, visitez <a href="${home_url}">${home_url.replace(,
+        "https://",
+        ""
+      )}</a>`,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
     tr: {
       message: `Özür dileriz ama şu an kullandığınız tarayıcı, <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>'sını destekliyor gibi görünüyor. Google destekli tarayıcılara bu kullanıcı düşmanı ilave <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">açık ve özgür İnternet'i baltalamak için çalışmaktadır</a> ve sonuç olarak desteklenmemektedir. Lütfen <a href="https://www.mozilla.org/tr/firefox/new/">Firefox</a>'ın veya kullanıcı kontrolü ve özgürlüğüne hâlâ değer veren herhangi başka bir tarayıcının en yeni sürümüne geçiş yapın. Anlayışınız için teşekkür ederiz. Daha fazla bilgi için şu siteyi ziyaret edin: <a href="${home_url}">${home_url.replace(
         "https://",
