@@ -1,3 +1,4 @@
+// @license magnet:?xt=urn:btih:5ac446d35272cc2e4e85e4325b146d0b7ca8f50c&dn=unlicense.txt Unlicense
 (() => {
   var lang =
     navigator.language ||
@@ -10,6 +11,38 @@
     lang = lang.toLowerCase();
   } else {
     lang = "";
+  }
+
+  window.FightForTheOpenWeb = window.FightForTheOpenWeb || {
+    allowDismissingPopup: false, // Default to false (website owner should create this object with the true value if they want the popup to be dismissable)
+  };
+
+  /**
+   * Checks if the popup has already been dismissed. Used in the script, but can also be used by the website owner for whatever purposes they like.
+   * @returns boolean
+   */
+  window.FightForTheOpenWeb.isDismissed = () => {
+    if (localStorage.getItem("FightForTheOpenWebDismiss") === "yes") {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+  /**
+   * Dismisses the popup. Used in the script, but can also be used by the website owner for whatever purposes they like.
+   * @returns nothing
+   */
+  window.FightForTheOpenWeb.dismiss = () => {
+    if (!window.FightForTheOpenWeb.isDismissed()) {
+      localStorage.setItem("FightForTheOpenWebDismiss", "yes");
+      document.getElementById("FightForTheOpenWebDiv").remove();
+    }
+  };
+
+  if (window.FightForTheOpenWeb.isDismissed()) {
+    // This will mean the user has already dismissed the popup, so don't proceed
+    return;
   }
 
   const home_url =
@@ -38,7 +71,8 @@
       message: `Veuillez nous excuser, mais le navigateur que vous utilisez actuellement semble prendre en charge l'<a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">API Web Environment Integrity</a>. Cette addition hostile aux utilisateurs aux navigateurs soutenus par Google <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">travaille à saper Internet libre et ouvert</a>, et n'est par conséquent pas pris en charge. Veuillez basculer sur la version la plus récente de <a href="https://www.mozilla.org/fr/firefox/new/">Firefox</a> ou sur tout autre navigateur qui attache encore de la valeur aux notions de contrôle de l'utilisateur et de liberté pour utiliser notre service. Nous vous remercions de votre compréhension. Pour plus d'informations, visitez <a href="${home_url}">${home_url.replace(
         "https://",
         ""
-      )}</a>`,                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             },
+      )}</a>`,
+    },
     tr: {
       message: `Özür dileriz ama şu an kullandığınız tarayıcı, <a href="https://github.com/RupertBenWiser/Web-Environment-Integrity">Web Environment Integrity API</a>'sını destekliyor gibi görünüyor. Google destekli tarayıcılara bu kullanıcı düşmanı ilave <a href="https://yewtu.be/watch?v=0i0Ho-x7s_U">açık ve özgür İnternet'i baltalamak için çalışmaktadır</a> ve sonuç olarak desteklenmemektedir. Lütfen <a href="https://www.mozilla.org/tr/firefox/new/">Firefox</a>'ın veya kullanıcı kontrolü ve özgürlüğüne hâlâ değer veren herhangi başka bir tarayıcının en yeni sürümüne geçiş yapın. Anlayışınız için teşekkür ederiz. Daha fazla bilgi için şu siteyi ziyaret edin: <a href="${home_url}">${home_url.replace(
         "https://",
@@ -66,50 +100,121 @@
     // Just in case the website has overwritten some of these styles, we're going to set everything as !important and overwrite things like `display` and `position` that could end up screwing up the text.
     // We're also setting the z-index value in case something gets added to the body after this script runs.
 
-    document.body.innerHTML = `
-          <style>
-              a {
-                  text-decoration: none !important;
-                  color: #013C88 !important;
-              }
+    var alertDivToAdd = document.createElement("div");
+    alertDivToAdd.id = "FightForTheOpenWebDiv";
+
+    alertDivToAdd.innerHTML = `
+        <style>
+            a {
+                text-decoration: none !important;
+                color: #013C88 !important;
+            }
   
-              a:hover {
-                  color: #142E51 !important;
-              }
-          </style>
+            a:hover {
+                color: #142E51 !important;
+            }
   
-          <div style="
-              overflow: auto !important;
-              background: #ffffff !important;
-              color: black !important;
-              font-weight: bold !important;
+            #FightForTheOpenWebDiv {
+              /*
+                Allows for blurring the page background
+                Derived from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_bottom
+              */
+              position: fixed !important;
+              z-index: 100000000000000000000000000000 !important;
+              left: 0 !important;
+              top: 0 !important;
               width: 100% !important;
               height: 100% !important;
-              text-align: center !important;
-              position: fixed !important;
-              top: 0 !important;
-              left: 0 !important;
-              font-size: 2em !important;
-              font-family: sans-serif !important;
+              overflow: auto !important;
+              background-color: rgb(0,0,0) !important; /* Fallback color */
+              background-color: rgba(0,0,0,0.4) !important; /* Partially transparent black color */
+            }
+  
+            button {
+              cursor: pointer !important;
+              padding: 1% !important;
+              display: block !important;
+              color: white !important;
+              border: 0 !important;
+              border-radius: 5px !important;
+              padding-left: 2% !important;
+              padding-right: 2% !important;
+              font-size: 20px !important;
+              margin-right: 1% !important;
+            }
+  
+            #dismissButtonContainer {
+              margin-top: 1% !important;
               display: flex !important;
-              z-index: 696969696969696969 !important;
-              align-items: center !important;
-          ">
-              <div style="
-                  padding-left: 5% !important;
-                  padding-right: 5% !important;
+              justify-content: center !important;
+            }
+        </style>
+  
+        <div style="
+            overflow: auto !important;
+            background: #ffffff !important;
+            color: black !important;
+            font-weight: bold !important;
+            width: 100% !important;
+            height: 80% !important;
+            text-align: center !important;
+            position: fixed !important;
+            bottom: 0 !important;
+            left: 0 !important;
+            font-size: 2em !important;
+            font-family: sans-serif !important;
+            display: flex !important;
+            align-items: center !important;
+        ">
+            <div style="
+              padding-left: 5% !important;
+              padding-right: 5% !important;
+            ">
+              <p style="
+                  margin: 0 !important; 
+                  padding: 0 !important; 
+                  margin-top: 2.5% !important; 
+                  display: unset !important; 
+                  position: unset !important;
               ">
-                  <p style="
-                      margin: 0 !important; 
-                      padding: 0 !important; 
-                      margin-top: 2.5% !important; 
-                      display: unset !important; 
-                      position: unset !important;
-                  ">
-                      ${text}
-                  </p>
-              </div>
-          </div>
+                  ${text}
+              </p>
+              <div id="dismissButtonContainer"></div>
+            </div>
+        </div>
       `;
+
+    document.body.prepend(alertDivToAdd);
+
+    if (window.FightForTheOpenWeb?.allowDismissingPopup) {
+      // For some reason, I can't get a normal :hover working with CSS, but I want a hover effect on this button.
+      // As such, I'm going to use JS for that.
+      document.getElementById("dismissButtonContainer").innerHTML = `
+          <button
+            onmouseenter="this.style.background='#e63939'"
+            onmouseleave="this.style.background='#d62f2f'"
+            onclick="window.FightForTheOpenWeb.dismiss()"
+            style="background: #d62f2f !important;"
+          >
+              Continue anyways
+          </button>
+  
+          <button
+            onmouseenter="this.style.background='#1b4173'"
+            onmouseleave="this.style.background='#142e51'"
+            onclick="location.href='https://www.mozilla.org/${
+              (navigator.language ||
+                navigator.userLanguage ||
+                navigator.browserLanguage ||
+                navigator.systemLanguage) ??
+              "en-us"
+            }/firefox/new/'"
+            style="background: #142e51 !important;"
+          >
+            Switch to Firefox
+          </button>
+        `;
+    }
   }
 })();
+// @license-end
