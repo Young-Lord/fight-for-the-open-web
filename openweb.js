@@ -131,8 +131,8 @@
                 width: 100% !important;
                 height: 100% !important;
                 overflow: auto !important;
-                background-color: rgb(0,0,0) !important; /* Fallback color */
-                background-color: rgba(0,0,0,0.4) !important; /* Partially transparent black color */
+                background-color: rgb(0,0,0); /* Fallback color */
+                background-color: rgba(0,0,0,0.4); /* Partially transparent black color */
               }
     
               button {
