@@ -1,11 +1,23 @@
 # Fight For the Open Web
 
-```javascript
-<script src="https://cdn.jsdelivr.net/gh/Young-Lord/fight-for-the-open-web@main/openweb.js" defer async></script>
-```
-
 [English](./README.md) | [简体中文](./README.zh-CN.md) | [Українська](./README.uk-UA.md) | [Français](./README.fr-FR.md) | [Türkçe](./README.tr.md) | [Nederlands](./README.nl-NL.md) |
 [Português](./README.pt-BR.md)
+
+## Sunsetting this project
+
+With Google [backing down](https://www.theverge.com/2023/11/2/22759886/google-chrome-web-integrity-api-drm-privacy-concerns) on the Web Integrity API, this project is no longer needed. I will keep this repository up for archival purposes, but no further update will be made.
+
+Everyone using this script should remove it from their website immediately.
+
+Thanks everyone contributing to this project. It's your effort that made this happen.
+
+See:
+
+- [Chrome not proceeding with Web Integrity API deemed by many to be DRM](https://9to5google.com/2023/11/02/google-chrome-web-integrity-api/)
+- [Google's announcement](https://android-developers.googleblog.com/2023/11/increasing-trust-for-embedded-media.html)
+- [My (@Young-Lord) attitude](https://github.com/Young-Lord/fight-for-the-open-web/issues/31#issuecomment-1797132851)
+
+> 中国人的性情是总喜欢调和，折中的。譬如你说，这屋子太暗，须在这里开一个窗，大家一定不允许的。但如果你主张拆掉屋顶，他们就会来调和，愿意开窗了。
 
 ## Why?
 
