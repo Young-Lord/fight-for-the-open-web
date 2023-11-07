@@ -5,7 +5,7 @@
 
 ## Sunsetting this project
 
-With Google [backing down](https://www.theverge.com/2023/11/2/22759886/google-chrome-web-integrity-api-drm-privacy-concerns) on the Web Integrity API, this project is no longer needed. I will keep this repository up for archival purposes, but no further update will be made.
+With Google backing down on the Web Integrity API, this project is no longer needed. I will keep this repository up for archival purposes, but no further update will be made.
 
 Everyone using this script should remove it from their website immediately.
 
